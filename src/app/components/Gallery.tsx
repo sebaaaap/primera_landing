@@ -1,5 +1,5 @@
 export default function Gallery() {
-  const images = ["/r11.png", "/r22.png", "/r33.png"];
+  const images = ["/r1.png", "/r2.png", "/r3.png"];
 
   return (
     <section className="py-16 bg-gray-50">

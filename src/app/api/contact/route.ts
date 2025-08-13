@@ -96,25 +96,49 @@ export async function POST(req: Request) {
     console.log("Correo enviado con éxito!");
     return NextResponse.json({ ok: true });
     
-  } catch (err: any) {
-    console.error("\n!!! ERROR EN EL PROCESO !!!");
-    console.error("Mensaje de error:", err.message);
-    
-    if (err.response) {
-      console.error("Respuesta del error:", err.response.data);
-    }
-    
-    if (err.code) {
-      console.error("Código de error:", err.code);
-    }
-    
-    if (err.stack) {
-      console.error("Stack trace:", err.stack);
-    }
-    
-    return NextResponse.json({ 
-      ok: false,
-      error: err.message || "Error interno del servidor"
-    }, { status: 500 });
+  } catch (err: unknown) { // Cambia any por unknown
+  let errorMessage = "Error interno del servidor";
+  let errorData: any = null;
+  let errorCode: string | number | undefined;
+  let stackTrace: string | undefined;
+
+  if (err instanceof Error) {
+    errorMessage = err.message;
+    stackTrace = err.stack;
   }
+
+  // Verificaciones adicionales para propiedades específicas
+  if (typeof err === 'object' && err !== null) {
+    if ('response' in err) {
+      const response = (err as { response?: any }).response;
+      if (response?.data) {
+        errorData = response.data;
+      }
+    }
+
+    if ('code' in err) {
+      errorCode = (err as { code?: string | number }).code;
+    }
+  }
+
+  console.error("\n!!! ERROR EN EL PROCESO !!!");
+  console.error("Mensaje de error:", errorMessage);
+
+  if (errorData) {
+    console.error("Respuesta del error:", errorData);
+  }
+
+  if (errorCode) {
+    console.error("Código de error:", errorCode);
+  }
+
+  if (stackTrace) {
+    console.error("Stack trace:", stackTrace);
+  }
+
+  return NextResponse.json({
+    ok: false,
+    error: errorMessage
+  }, { status: 500 });
+}
 }

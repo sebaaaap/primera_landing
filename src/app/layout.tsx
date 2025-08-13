@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "https://tu-dominio.com",
     siteName: "Mecánico Profesional",
     images: [
-      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Mecánico" },
+      { url: "/m4.png", width: 1200, height: 630, alt: "Mecánico" },
     ],
     locale: "es_CL",
     type: "website",

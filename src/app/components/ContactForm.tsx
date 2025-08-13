@@ -11,13 +11,18 @@ export default function ContactForm() {
 
     const form = e.target as HTMLFormElement;
     const data = {
-      name: (form.name as unknown as HTMLInputElement).value,
-      email: (form.email as HTMLInputElement).value,
-      message: (form.message as HTMLInputElement).value,
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      // CAMBIO: Usar "phone" en lugar de "number" para coincidir con el backend
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLInputElement).value,
     };
 
     const res = await fetch("/api/contact", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
 
@@ -32,6 +37,8 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
           <input type="text" name="name" placeholder="Nombre" required className="w-full p-3 border rounded" />
           <input type="email" name="email" placeholder="Correo" required className="w-full p-3 border rounded" />
+          {/* CAMBIO: Cambiar "number" por "phone" */}
+          <input type="tel" name="phone" placeholder="Número de Teléfono" required className="w-full p-3 border rounded" />
           <textarea name="message" placeholder="Mensaje" required className="w-full p-3 border rounded" />
           <button type="submit" className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600">Enviar</button>
           {status && <p className="text-center mt-4">{status}</p>}

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
-  const [pos, setPos] = useState({ x: 20, y: 20 });
+  const [pos, setPos] = useState({ x: 10, y: 10 });
   const [dragging, setDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 

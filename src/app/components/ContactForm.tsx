@@ -35,9 +35,8 @@ export default function ContactForm() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Contáctanos</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
-          <input type="text" name="name" placeholder="Nombre" required className="w-full p-3 border rounded" />
+          <input type="text" name="name" placeholder="Nombreee" required className="w-full p-3 border rounded" />
           <input type="email" name="email" placeholder="Correo" required className="w-full p-3 border rounded" />
-          {/* CAMBIO: Cambiar "number" por "phone" */}
           <input type="tel" name="phone" placeholder="Número de Teléfono" required className="w-full p-3 border rounded" />
           <textarea name="message" placeholder="Mensaje" required className="w-full p-3 border rounded" />
           <button type="submit" className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600">Enviar</button>

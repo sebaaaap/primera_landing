@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 export default function Gallery() {
-  const images = ["/r1.png", "/r2.png", "/r3.png"];
+  const images = ["/r1.png", "/b1.png", "/b2.png"];
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">Trabajos Realizados</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Nuestro equipo</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {images.map((img, idx) => (
             <div 

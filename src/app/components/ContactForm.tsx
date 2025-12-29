@@ -56,13 +56,13 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-neutral-light">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Contáctanos</h2>
 
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto space-y-4 bg-gray-50 p-6 rounded-lg shadow-sm"
+          className="max-w-lg mx-auto space-y-4 bg-white p-6 rounded-lg shadow-sm"
         >
           {/* Nombre */}
           <input
@@ -70,7 +70,7 @@ export default function ContactForm() {
             name="name"
             placeholder="Nombre"
             required
-            className="w-full p-3 border rounded focus:ring focus:ring-blue-200"
+            className="w-full p-3 border rounded focus:ring focus:ring-primary-soft outline-none transition"
           />
 
           {/* Email */}
@@ -81,12 +81,12 @@ export default function ContactForm() {
             required
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             title="Ingrese un correo válido"
-            className="w-full p-3 border rounded focus:ring focus:ring-blue-200"
+            className="w-full p-3 border rounded focus:ring focus:ring-primary-soft outline-none transition"
           />
 
           {/* Teléfono con prefijo fijo */}
           <div className="flex">
-            <span className="flex items-center px-3 border rounded-l bg-gray-100 text-gray-700">
+            <span className="flex items-center px-3 border rounded-l bg-neutral-light text-neutral-medium">
               +569
             </span>
             <input
@@ -96,7 +96,7 @@ export default function ContactForm() {
               required
               pattern="^[0-9]{8}$"
               title="Debe ingresar los 8 dígitos de su número chileno"
-              className="w-full p-3 border rounded-r focus:ring focus:ring-blue-200"
+              className="w-full p-3 border rounded-r focus:ring focus:ring-primary-soft outline-none transition"
             />
           </div>
 
@@ -105,7 +105,7 @@ export default function ContactForm() {
             <button
               type="button"
               onClick={() => setShowServices(!showServices)}
-              className="w-full text-left p-3 border rounded bg-white flex justify-between items-center hover:bg-gray-100"
+              className="w-full text-left p-3 border rounded bg-white flex justify-between items-center hover:bg-neutral-light transition"
             >
               {selectedServices.length > 0
                 ? `Servicios seleccionados (${selectedServices.length})`
@@ -138,13 +138,13 @@ export default function ContactForm() {
             name="message"
             placeholder="Mensaje"
             required
-            className="w-full p-3 border rounded focus:ring focus:ring-blue-200"
+            className="w-full p-3 border rounded focus:ring focus:ring-primary-soft outline-none transition"
           />
 
           {/* Botón de envío */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600 transition"
+            className="w-full bg-primary text-white py-3 px-6 rounded hover:bg-accent transition font-bold"
           >
             Enviar
           </button>

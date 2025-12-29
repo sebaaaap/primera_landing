@@ -17,11 +17,11 @@ export default function BrandsCarousel() {
     <div className="flex flex-col w-full py-6">
       {/* Encabezado con el texto alineado a la derecha */}
       <div className="flex justify w-full px-4 pb-2">
-        <h2 className="text-lg font-semibold text-gray-800">
+        <h2 className="text-lg font-semibold text-neutral-dark">
           Marcas con las que trabajamos
         </h2>
       </div>
-      
+
       {/* Carrusel de marcas */}
       <div className="relative w-full overflow-hidden">
         <div className="flex w-max animate-scroll">
@@ -44,4 +44,4 @@ export default function BrandsCarousel() {
     </div>
   );
 }
-        
+

@@ -4,12 +4,12 @@ export default function Gallery() {
   const images = ["/r1.png", "/b1.png", "/b2.png"];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-neutral-light">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-10">Nuestro equipo</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {images.map((img, idx) => (
-            <div 
+            <div
               key={idx}
               className="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 transition"
               style={{ aspectRatio: '4/3' }} // Ajusta según relación de aspecto de tus imágenes

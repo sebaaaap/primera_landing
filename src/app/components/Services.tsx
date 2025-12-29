@@ -62,17 +62,17 @@ export default function Services() {
               key={idx}
               className="group bg-white p-8 rounded-2xl shadow-lg border border-neutral-light transition-all duration-500 hover:shadow-xl hover:border-primary-soft hover:scale-[1.02]"
             >
-              <div className="w-16 h-16 mb-6 rounded-xl bg-primary-soft flex items-center justify-center text-3xl transition-all duration-500 group-hover:bg-primary group-hover:text-white">
+              <div className="w-16 h-16 mb-6 rounded-xl bg-primary-soft flex items-center justify-center text-3xl transition-all duration-500 group-hover:bg-primary group-hover:text-neutral-dark">
                 {srv.icon}
               </div>
-              <h3 className="text-xl font-bold text-neutral-dark mb-3 transition-colors duration-500 group-hover:text-primary">
+              <h3 className="text-xl font-bold text-neutral-dark mb-3 transition-colors duration-500 group-hover:text-accent">
                 {srv.title}
               </h3>
               <p className="text-neutral-medium mb-4">{srv.desc}</p>
               <div className="flex items-center mt-6">
-                <span className="text-primary font-medium">Saber más</span>
+                <span className="text-accent font-medium">Saber más</span>
                 <div className="ml-2 w-5 h-5 flex items-center justify-center group-hover:translate-x-1 transition-transform duration-300">
-                  <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </div>

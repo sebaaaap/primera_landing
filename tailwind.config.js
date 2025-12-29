@@ -8,20 +8,21 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0066FF', // Azul eléctrico
-          soft: '#E6F0FF',    // Azul suave
+          DEFAULT: '#FFCC00', // Amarillo Energía
+          soft: '#FFF9E6',    // Amarillo claro
         },
         accent: {
-          DEFAULT: '#FF6600', // Naranja vibrante
-          light: '#FFE6CC',   // Naranja claro
+          DEFAULT: '#E63946', // Rojo Intenso
+          light: '#FF6B6B',   // Rojo apagado
         },
         neutral: {
-          dark: '#222222',    // Gris oscuro
+          dark: '#1A1A1A',    // Negro Profundo
           medium: '#666666',  // Gris medio
-          light: '#F5F5F5',   // Gris claro
-          white: '#FFFFFF',   // Blanco puro
+          light: '#F2F2F2',   // Gris claro
+          white: '#FFFFFF',   // Blanco Puro
+          card: '#2D2D2D',    // Gris Oscuro
         },
-        footer: '#2C3E50',    // Gris azulado
+        footer: '#1A1A1A',    // Negro Profundo - Footer
       },
     },
   },

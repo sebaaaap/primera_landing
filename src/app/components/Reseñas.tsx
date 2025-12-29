@@ -26,7 +26,7 @@ export default function Reviews() {
     return [...Array(5)].map((_, i) => (
       <span
         key={i}
-        className={i < rating ? "text-accent" : "text-neutral-light"}
+        className={i < rating ? "text-primary" : "text-neutral-light"}
       >
         ★
       </span>

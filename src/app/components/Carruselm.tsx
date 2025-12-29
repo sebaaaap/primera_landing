@@ -18,7 +18,7 @@ export default function BrandsCarousel() {
       {/* Encabezado con el texto alineado a la derecha */}
       <div className="flex justify w-full px-4 pb-2">
         <h2 className="text-lg font-semibold text-neutral-dark">
-          Marcas con las que trabajamos
+          Marcas con las que colaboramos
         </h2>
       </div>
 
